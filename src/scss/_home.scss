@@ -1,0 +1,249 @@
+body.home {
+  h2 {
+    color: black;
+    font-size: 34px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  p.tagline {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  section.banner {
+    background: url(/img/home/banner.jpg) no-repeat right top;
+    @include media-breakpoint-down(xxl) {
+      background-position: right -100px top;
+    }
+    @include media-breakpoint-down(xl) {
+      background-position: right -200px top;
+    }
+    @include media-breakpoint-down(lg) {
+      background: $blue-light;
+    }
+    background-size: cover;
+    color: white;
+    padding: 140px 0;
+    @include media-breakpoint-down(lg) {
+      padding: 50px 50px 140px 50px;
+      p {
+        padding-bottom: 90px;
+        font-size: 4vw;
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 30px 20px 140px 20px;
+    }
+    h1 {
+      font-size: 60px;
+      line-height: 1;
+      @include media-breakpoint-down(sm) {
+        font-size: 14vw;
+      }
+      margin-bottom: 17px;
+      &:after {
+        display: block;
+        content: '.................';
+        font-size: 24px;
+        letter-spacing: 0.5em;
+        color: rgba(255, 255, 255, 0.5);
+        overflow: hidden;
+      }
+      span {
+        display: block;
+        font-size: 28px;
+        font-weight: 400;
+      }
+    }
+    p.description {
+      font-family: $font-family-special;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+  }
+  section.insights {
+    background-color: #ebebeb;
+    padding: 50px 0 40px 0;
+    overflow: hidden;
+    a {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: $blue;
+      border-bottom: 12px solid $blue;
+      text-decoration: none;
+      padding: 38px 24px 0 24px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 3px 8px 0.5px rgba(0, 0, 0, 0.4);
+      &:hover {
+        @include media-breakpoint-up(md) {
+          background-color: $blue;
+          color: white;
+        }
+      }
+      p {
+        @include media-breakpoint-up(xs) {
+          font-size: 5.1vw;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 2.1vw;
+        }
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      &.insight-2 {
+        color: $green;
+        border-color: $green;
+        &:hover {
+          @include media-breakpoint-up(md) {
+            background-color: $green;
+            color: white;
+          }
+        }
+      }
+      &.insight-3 {
+        color: $blue-light;
+        border-color: $blue-light;
+        &:hover {
+          @include media-breakpoint-up(md) {
+            background-color: $blue-light;
+            color: white;
+          }
+        }
+      }
+    }
+    img {
+      margin-bottom: 25px;
+      clip-path: polygon(
+        0% 35%,
+        25% 0%,
+        100% 0%,
+        100% 0%,
+        100% 65%,
+        75% 100%,
+        0% 100%,
+        0 100%
+      );
+    }
+  }
+  section.commitment {
+    background: url(/img/home/commitment-bg.jpg) no-repeat center top $blue;
+    background-size: cover;
+    padding: 115px 0;
+    color: white;
+    h2 {
+      font-size: 40px;
+      color: white;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 24px;
+      line-height: 33px;
+    }
+    a.button {
+      margin-top: 61px;
+    }
+  }
+  section.events {
+    padding: 45px 0 100px 0;
+    overflow: hidden;
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 70px;
+    }
+    p.tagline {
+      margin-bottom: 50px;
+    }
+    .owl-item:not(.active) {
+      transform-origin: center left;
+    }
+    div.inner {
+      background: linear-gradient(
+          360deg,
+          rgba(0, 0, 0, 0.2) 0%,
+          rgba(0, 0, 0, 0) 21%
+        ),
+        $blue-medium-dark;
+      box-shadow: 0px -16px 28px -10px rgba(0, 0, 0, 0.3);
+      color: white;
+      padding: 0 25px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h3 {
+        font-size: 28px;
+        margin-bottom: 0;
+      }
+      h3 + p {
+        font-size: 15px;
+        flex-grow: 1;
+      }
+      div.date {
+        color: $green;
+        background-color: white;
+        width: 93px;
+        height: 86px;
+        position: relative;
+        top: -18px;
+        &:before {
+          display: block;
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 0 18px 18px;
+          border-color: transparent transparent rgba(183, 183, 183, 0.75)
+            transparent;
+          position: absolute;
+          left: -18px;
+          top: 0;
+        }
+        span {
+          display: block;
+          font-family: $font-family-special;
+          line-height: 1;
+          &.month {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 16px;
+          }
+          &.day {
+            font-weight: 700;
+            font-size: 36px;
+          }
+        }
+      }
+      a.button {
+        margin-bottom: 46px;
+      }
+      p.location {
+        font-family: $font-family-special;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1;
+        text-align: right;
+        width: 93%;
+        color: black;
+        background-color: white;
+        // fix for blue line at bottom caused by clip-path. May be a better way.
+        margin-bottom: -1px;
+        margin-right: -26px;
+        margin-left: 25px;
+        padding: 10px 25px 10px 25px;
+        align-self: end;
+        box-sizing: content-box;
+        clip-path: polygon(
+          0% 100%,
+          12% 0%,
+          100% 0%,
+          100% 0%,
+          100% 100%,
+          100% 100%,
+          0% 100%,
+          0% 100%
+        );
+      }
+    }
+  }
+}
